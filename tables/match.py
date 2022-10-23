@@ -1,0 +1,41 @@
+from sqlalchemy import Column, Boolean, Integer, DateTime, Float
+from .base import Base
+
+
+class Match(Base):
+    __tablename__ = 'match'
+
+    id = Column(Integer, primary_key=True)
+    league = Column(Integer)
+    date = Column(DateTime)
+    is_neutral_ground = Column(Boolean)
+    home_team = Column(Integer)
+    away_team = Column(Integer)
+    home_team_coach = Column(Integer)
+    away_team_coach = Column(Integer)
+    home_team_score = Column(Integer)
+    away_team_score = Column(Integer)
+    home_team_shots = Column(Integer)
+    away_team_shots = Column(Integer)
+    home_team_shots_on_target = Column(Integer)
+    away_team_shots_on_target = Column(Integer)
+    home_team_possession = Column(Integer)
+    away_team_possession = Column(Integer)
+    home_team_passes = Column(Integer)
+    away_team_passes = Column(Integer)
+    home_team_completed_passes = Column(Integer)
+    away_team_completed_passes = Column(Integer)
+    home_team_fouls = Column(Integer)
+    away_team_fouls = Column(Integer)
+    home_team_yellow_cards = Column(Integer)
+    away_team_yellow_cards = Column(Integer)
+    home_team_red_cards = Column(Integer)
+    away_team_red_cards = Column(Integer)
+    home_team_offsides = Column(Integer)
+    away_team_offsides = Column(Integer)
+    home_team_aerials_won = Column(Integer)
+    away_team_aerials_won = Column(Integer)
+    home_team_touches = Column(Integer)
+    away_team_touches = Column(Integer)
+    home_team_xG = Column(Float)
+    away_team_xG = Column(Float)
